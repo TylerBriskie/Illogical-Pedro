@@ -1,7 +1,14 @@
-body {
-  background-color:#6BB7AB;
+.container {
+  margin:0 auto;
+  width:90%;
 }
 
-header h1{
+body {
+    background-image: url("../assets/textured_paper.png");
+    color:#222;
+}
+
+header h1 {
   font-family: 'Schoolbell', cursive;
+  border-bottom: solid 2px #333;
 }

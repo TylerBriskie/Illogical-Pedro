@@ -9,19 +9,26 @@
         integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
         crossorigin="anonymous">
     </script>
-    <script type="text/javascript" src="./scripts/script1.js">
+    <script type="text/javascript" src="./scripts/script.js">
     </script>
     <title>Hey, welcome to Pedro's!</title>
   </head>
   <body>
-    <header>
-    <h1>illogical pedros</h1>
-    </header>
-    <h1>Oh, so YOU'RE the new hire.</h1>
-    <h2>What's your name??</h2>
-    <form class="newPlayer">
-      <input type="text" class="newPlayer" value=""/>
-    <button type="submit" class="newPlayer" name="newPlayer">Sign me up</button>
-  </form>
+    <div class="container">
+
+      <header>
+      <h1>illogical pedros</h1>
+      </header>
+      <h1 id="headerOne">Welcome to the company!</h1>
+      <h2 id="headerTwo">First we need you to fill out some paperwork before we can begin your training</h2>
+      <form class="playerName">
+        <label for="userName">Your Name:</label>
+        <input type="text" class="playerName" name="userName" value="">
+        <button type="submit" id="submitName">submit</button>
+      </form>
+      <div class="startGame">
+
+      </div>
+  </div>
   </body>
 </html>

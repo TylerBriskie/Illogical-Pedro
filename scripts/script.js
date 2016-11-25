@@ -1,27 +1,34 @@
-var customerTypes = ["Angry", "Drunk", "Dumb", "First Timer", "Know It All", "Aloof", "Socially Awkward"];
+// $.ajax({
+//   url: 'https://randomuser.me/api/?nat=us',
+//   dataType: 'json',
+//   success: function(data){
+//     this.firstName = data.results[0].name.first;
+//     this.lastName = data.results[0].name.last;
+//     $('.customers-go-here').append('<p>' + this.firstName + " " + this.lastName + '</p>');
+//   },
+// });
 
-var coWorkerTypes = ["Flirty", "Drunk", "Angry", "Lazy", "Type A", "Cheery", "Company Man"];
-var coWorkerRoles = ["Line", "Cook", "Bartender", "Supervisor"];
+$(document).ready(function() {
 
-var playerName = '';
-
-$('.playerName').submit(function(event) {
+  $('.playerName').submit(function(event) {
     event.preventDefault();
-    playerName = $('input[name=newPlayer]').val();
-});
+    var $playerName = $('input[name=userName]').val();
+    if ($playerName.length === 0) {
+        alert("We have to call you something!");
+    } else {
+      $('#headerOne').html('Congrats ' + $playerName + ", you're hired!");
+      $('#headerTwo').html('');
+      $('.playerName').html('');
+      $('.startGame').html('<a href="day1.html"><button type="submit" id="dayOne">that was easy</button></a>')
+    }
+  });
+  $('#dayOne').click(function(event){
+    event.preventDefault();
 
-$.ajax({
-  url: 'https://randomuser.me/api/',
-  dataType: 'json',
-  success: getNewCustomer(data),
-});
+  });
 
-var getNewCustomer = function(data){
-  this.firstName = data.results[0].name.first;
-  this.lastName = data.results[0].name.last;
-  this.drunk = Math.floor(Math.random()*10);
-  this.flirty = Math.floor(Math.random()*10);
-  this.angry = Math.floor(Math.random()*10);
-  this.cool = Math.floor(Math.random()*10);
-  this.exp = Math.floor(Math.random()*10);
-};
+  // $('#getCustomers')
+
+
+
+});
